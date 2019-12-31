@@ -53,5 +53,10 @@ body::-webkit-scrollbar-thumb {
   box-shadow: 9px 9px 16px rgba(163, 177, 198, 0.5),
     -9px -9px 16px rgba(255, 255, 255, 0.9);
   border-radius: 18px;
-  padding: 25px;
+  // padding: 25px;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  h1, h2, h3, p, input {
+    transform: translateX(35px);
+  }
 }

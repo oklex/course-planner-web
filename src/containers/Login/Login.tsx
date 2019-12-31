@@ -1,13 +1,17 @@
-import React from "react"
+import React from "react";
 
-class Login extends React.Component<{},{}> {
-    render() {
-        return (
-            <div>
-                <p>hello world</p>
-            </div>
-        )
-    }
+class Login extends React.Component<{}, {}> {
+  render() {
+    return (
+      <div className="row">
+        <div className="col-md-3">
+          <div className="card">
+            <p>hello world</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
 
-export default Login
+export default Login;
