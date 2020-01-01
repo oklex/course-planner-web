@@ -1,0 +1,16 @@
+.textInput {
+    float: left;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 16px;
+    padding-right: 40px;
+    width: 100%;
+    background-color: white;
+    box-shadow: 4px 4px 9px #C4C4C4, -4px -4px 9px #C4C4C4;
+    border-radius: 10px;
+}
+.statusIcon {
+    position: absolute;
+    left: 100%;
+    padding-top: 9px;
+}
