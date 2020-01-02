@@ -1,6 +1,6 @@
 import React from "react";
 import IErrorStatus from "../../types/errorStatus";
-import './textInput.scss'
+import "./textInput.scss";
 
 const disabledIcon: string = "/icons/disabled_icon.svg";
 const emptyIcon: string = "/icons/empty_icon.svg";
@@ -29,7 +29,9 @@ class Input extends React.Component<ITextInputProps, ITextInputState> {
   onChange = (e: React.FormEvent<HTMLInputElement>) => {
     console.log(e.currentTarget.value);
     this.setState({
-      value: e.currentTarget.value
+      value: e.currentTarget.value,
+      status: null,
+      message: null
     });
   };
 
@@ -45,12 +47,24 @@ class Input extends React.Component<ITextInputProps, ITextInputState> {
   showStatusIcon = () => {
     if (this.props.disabled) {
       return <img src={disabledIcon} alt="disabled indicator"></img>;
+    } else if (this.state.status === false) {
+      return <img src={warningIcon} alt="error indicator"></img>;
     } else if (!this.state.status) {
       return <img src={emptyIcon} alt="empty text indicator"></img>;
     } else if (this.state.status) {
       return <img src={successIcon} alt="success indicator"></img>;
     }
   };
+
+  getBorderColourClass = () => {
+    if (this.state.status === null) {
+      return ' '
+    } else if (this.state.status === false) {
+      return ' error'
+    } else if (this.state.status) {
+      return ' success'
+    }
+  }
 
   render() {
     const emptyString: string = "";
@@ -61,7 +75,7 @@ class Input extends React.Component<ITextInputProps, ITextInputState> {
     return (
       <div>
         <input
-          className='textInput'
+          className={"textInput" + this.getBorderColourClass()}
           onChange={this.onChange}
           onBlur={this.onCheck}
           name={name}
@@ -69,7 +83,7 @@ class Input extends React.Component<ITextInputProps, ITextInputState> {
           {...(this.props.disabled ? "disabled" : "")}
           value={this.state.value}
         ></input>
-        <span className='statusIcon'>{this.showStatusIcon()}</span>
+        <span className="statusIcon">{this.showStatusIcon()}</span>
       </div>
     );
   }

@@ -1,3 +1,5 @@
+@import '../../styles/colours.scss';
+
 .textInput {
     float: left;
     padding-top: 10px;
@@ -9,8 +11,14 @@
     box-shadow: 4px 4px 9px #C4C4C4, -4px -4px 9px #C4C4C4;
     border-radius: 10px;
 }
+.success {
+    border: $green 1px solid;
+}
+.error {
+    border: $red 1px solid;
+}
 .statusIcon {
     position: absolute;
-    left: 100%;
+    left: calc(100% - 10px);
     padding-top: 9px;
 }

@@ -56,7 +56,21 @@ body::-webkit-scrollbar-thumb {
   // padding: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
+  padding-right: 10px;
   h1, h2, h3, p, input {
     transform: translateX(35px);
   }
+  .card-title {
+    padding-bottom: 10px;
+  }
+}
+
+.card-sm {
+  width: 350px
+}
+.card-md {
+  max-width: 540px;
+}
+.card-lg {
+  max-width: 720px;
 }

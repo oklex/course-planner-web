@@ -1,0 +1,17 @@
+@import "../../styles/colours.scss";
+
+// .tooltip:hover {
+//     .tooltip-desc {
+//         width: auto;
+//         visibility: visible;
+//         background-color: black;
+//         padding: 5px;
+//         border-radius: 15px;
+//     }
+// }
+
+.tooltip-icon {
+  position: absolute;
+  left: calc(100% - 40px);
+  bottom: 115px;
+}
