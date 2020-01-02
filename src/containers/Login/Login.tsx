@@ -19,6 +19,7 @@ class Login extends React.Component {
       <div>
         <InputCard title="Login" tooltip="info here">
           <Input isValid={this.isValid} placeholder="school email" />
+          <Input isValid={this.isValid} placeholder="password" />
         </InputCard>
         
         <InputCard title="Signup" tooltip="info 2 here">

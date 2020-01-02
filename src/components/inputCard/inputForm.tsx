@@ -22,7 +22,7 @@ class InputCard extends React.Component<IInputCardProps, {}> {
             data-tip
             data-for={this.props.title}
           ></img>
-          <ReactTooltip id={this.props.title} place="right" type="info" effect="float">{this.props.tooltip}</ReactTooltip>
+          <ReactTooltip id={this.props.title} place="right" type="dark" effect="float">{this.props.tooltip}</ReactTooltip>
         </div>
       );
     } else return <span />;
@@ -35,8 +35,8 @@ class InputCard extends React.Component<IInputCardProps, {}> {
   render() {
     return (
       <div className="card card-sm">
-        {this.renderTitle()}
         {this.renderTooltip()}
+        {this.renderTitle()}
         {this.props.children}
       </div>
     );
